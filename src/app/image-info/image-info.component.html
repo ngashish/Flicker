@@ -1,0 +1,12 @@
+<div class="card">
+  <img src="{{selectedImage.imageUrl}}" style="height: 100px" alt="John" style="width:100%">
+  <form [formGroup]='imageRating' (ngSubmit)='submit()' class="container">
+    <rating formControlName="rating" [max]="max" class="custom-rating" [readonly]="false"></rating>
+    <input type="text" placeholder="Rate By" formControlName="ratingBy" required>
+    <textarea row='4' col='10' placeholder="Reason" formControlName="ratingReason" required></textarea>
+    <div>
+      <button type="submit" class="btn">Submit</button>
+      <button type="button" class="btn" (click)='navigateTo()'>Cancel</button>
+    </div>
+  </form>
+</div>

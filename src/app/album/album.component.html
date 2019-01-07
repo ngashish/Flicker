@@ -1,0 +1,17 @@
+<div class="container">
+  <main class="content">
+    <hr>
+    <ul class="gallery">
+      <li *ngFor="let image of images">
+        <div class="imgwrap">
+          <a (click)='navigateTo(image)'>
+            <img src={{image.imageUrl}} style="height: 150px" alt={{image.imageUrl}}>
+            <span class="imgmask"></span>
+          </a>
+        </div>
+        <rating [(ngModel)]="image.rating" [max]="max" [readonly]="true"></rating>
+      </li>
+    </ul>
+    <hr>
+  </main>
+</div>
