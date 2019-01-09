@@ -47,12 +47,14 @@ export class AlbumComponent implements OnInit {
         });
         this.images.shift();
         var obj = JSON.parse(localStorage.getItem('itemToUpdate'));        
+        console.log(this.images);
         if (localStorage.getItem('itemToUpdate')) {
-          this.images.map(ele=>{
+          this.images.map((ele:any)=>{              
               if(obj.image.id == ele.image.id){
                 this.images[this.images.indexOf(ele)] = obj;
               }
-          });          
+          });
+          
         }
       });
   }
