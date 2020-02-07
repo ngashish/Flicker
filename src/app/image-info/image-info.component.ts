@@ -13,7 +13,7 @@ export class ImageInfoComponent implements OnInit {
   max = 5;
   imageRating : FormGroup;
   ngOnInit() {
-    console.log("n ");
+    console.log("n");
     
     var data = JSON.parse(localStorage.getItem('imageSelected'));
     this.selectedImage = data;
